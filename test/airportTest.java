@@ -13,7 +13,13 @@ class airportTest {
 
     @Test
     public void landReturnsAMessage() {
-        assertEquals("Plane landed", tester.land(), "Landing planes should return a message");
+        assertEquals("Plane landed", tester.land("I'm a plaaaaaaane!!"), "Landing planes should return a message");
+    }
+
+    @Test
+    public void landAddsSomethingToHangar() {
+        tester.land("I'm a plaaaaaaane!!");
+        assertEquals(1, tester.getPlaneCount(), "Landing planes should add them to the hangar");
     }
 
 }
