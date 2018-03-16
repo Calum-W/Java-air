@@ -22,4 +22,9 @@ class airportTest {
         assertEquals(1, tester.getPlaneCount(), "Landing planes should add them to the hangar");
     }
 
+    @Test
+    public void takeOffReturnsAMessage() {
+        assertEquals("Plane has taken off", tester.takeOff("I'm a plaaaaaaane!!"), "Taking off planes should return a message");
+    }
+
 }

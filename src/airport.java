@@ -9,6 +9,10 @@ public class airport {
         return "Plane landed";
     }
 
+    public String takeOff(String plane) {
+        return "Plane has taken off";
+    }
+
     public int getPlaneCount() {
         return hangar.size();
     }
