@@ -10,6 +10,7 @@ public class airport {
     }
 
     public String takeOff(String plane) {
+        hangar.remove(plane);
         return "Plane has taken off";
     }
 

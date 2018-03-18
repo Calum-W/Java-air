@@ -27,4 +27,11 @@ class airportTest {
         assertEquals("Plane has taken off", tester.takeOff("I'm a plaaaaaaane!!"), "Taking off planes should return a message");
     }
 
+    @Test
+    public void takeOffRemovesPlaneFromHangar() {
+        tester.land("I'm a plaaaaaaane!!");
+        tester.takeOff("I'm a plaaaaaaane!!");
+        assertEquals(0, tester.getPlaneCount(), "Take off should remove planes from the hangar");
+    }
+
 }
